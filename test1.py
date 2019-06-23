@@ -15,6 +15,7 @@ git status
 git commit -m 'add test1.py'
 添加到远程仓库
 git push
+可以直接在Pycharm上提交到GitHub上
 
 Python优缺点：
 易学，语法简单，容易上手
