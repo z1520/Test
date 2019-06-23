@@ -1,6 +1,6 @@
 # test1 2019/06/23  搭建编程环境及Python的基本了解
 
-print("Hello World")
+print("Hello World") # 你好，世界
 
 """
 初始化一个新的Git仓库
@@ -15,6 +15,8 @@ git status
 git commit -m 'add test1.py'
 添加到远程仓库
 git push
+https://blog.csdn.net/tobeng/article/details/80868818
+可以直接通过Pycharm提交到GitHub
 
 Python优缺点：
 易学，语法简单，容易上手
