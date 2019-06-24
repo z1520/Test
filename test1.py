@@ -17,6 +17,7 @@ git commit -m 'add test1.py'
 git push
 https://blog.csdn.net/tobeng/article/details/80868818
 可以直接通过Pycharm提交到GitHub
+https://www.jianshu.com/p/94aafbe82dc7
 删除GitHub上的文件：
 https://blog.csdn.net/wudinaniya/article/details/77508229
 
