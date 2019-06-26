@@ -41,14 +41,20 @@ print(round(s_temp,2))  # round函数返回小数点四舍五入的n个数字
 r = float(input('园的半径r='))
 pi = 3.14159265359
 s = float(pi*(r**2))
+l = float(pi*2*r)
 print(round(s,2))
+print(round(l,2))
 
 #输入年份判断是否是闰年
 year = int(input('请输入年份：'))
 number1 = year%4
 number2 = year%100
-print(number1)
-if number1 == 0 and number2 != 0:
+number3 = year%400
+print(number1 , number2 , number3)
+if number1 == 0 and number2 != 0 :
     print("闰年")
 else:
-    print("非闰年")
+    if number3 == 0:
+        print("闰年")
+    else:
+        print("非闰年")
