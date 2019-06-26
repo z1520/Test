@@ -23,5 +23,8 @@ str2 = 'world'
 new_str = str1 + str2
 print(new_str)  # 不能加引号，否则只会输出new_str这个变量名
 数字和字符串之间支持乘法运算
+
+输入和输出，简称i/o  intput和output
 """
+
 # 华氏温度转换为摄氏温度
