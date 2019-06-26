@@ -28,6 +28,27 @@ print(new_str)  # 不能加引号，否则只会输出new_str这个变量名
 标准I/O 标准的输入和输出，从键盘读，往屏幕写
 文件I/O 从文件读，往文件写
 网络I/O
+
+函数中的逗号用来隔开多个变量    \n表示换行  end=''表示不换行
 """
 
 # 华氏温度转换为摄氏温度
+h_temp = float(input('华氏温度='))
+s_temp = float((h_temp-32)*5/9)
+print(round(s_temp,2))  # round函数返回小数点四舍五入的n个数字
+
+# 输入圆的半径计算周长和面积
+r = float(input('园的半径r='))
+pi = 3.14159265359
+s = float(pi*(r**2))
+print(round(s,2))
+
+#输入年份判断是否是闰年
+year = int(input('请输入年份：'))
+number1 = year%4
+number2 = year%100
+print(number1)
+if number1 == 0 and number2 != 0:
+    print("闰年")
+else:
+    print("非闰年")
