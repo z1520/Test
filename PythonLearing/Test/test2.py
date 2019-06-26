@@ -34,7 +34,7 @@ print(new_str)  # 不能加引号，否则只会输出new_str这个变量名
 
 # 华氏温度转换为摄氏温度
 h_temp = float(input('华氏温度='))
-s_temp = float((h_temp-32)*5/9)
+s_temp = float((h_temp-32)*5/9)  # 摄氏温度
 print(round(s_temp,2))  # round函数返回小数点四舍五入的n个数字
 
 # 输入圆的半径计算周长和面积
@@ -42,8 +42,8 @@ r = float(input('园的半径r='))
 pi = 3.14159265359
 s = float(pi*(r**2))
 l = float(pi*2*r)
-print(round(s,2))
-print(round(l,2))
+print(round(s,2))  # 园的面积
+print(round(l,2))  # 圆的半径
 
 #输入年份判断是否是闰年
 year = int(input('请输入年份：'))
@@ -51,10 +51,10 @@ number1 = year%4
 number2 = year%100
 number3 = year%400
 print(number1 , number2 , number3)
-if number1 == 0 and number2 != 0 :
+if number1 == 0 and number2 != 0 :  # 当年份能被4整除且不能被100整除时
     print("闰年")
 else:
-    if number3 == 0:
+    if number3 == 0:  # 当年份能被400整除
         print("闰年")
     else:
         print("非闰年")
