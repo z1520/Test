@@ -21,29 +21,29 @@ bug会导致程序执行结果不是预期
 """
 
 
-# 猜拳游戏
-# 导入随机数
-import random
-
-while True:
-    # 获取用户的拳头
-    user_quan = int(input('请输入：石头（0）剪刀（1）布（2）'))
-    if user_quan == 3:
-        print('退出游戏！')
-        break
-    # 获取系统的拳头
-    computer_quan = random.randint(0,2)
-
-    # 判断胜负
-    # 用户赢的情况
-    if (user_quan == 0 and computer_quan == 1) or \
-        (user_quan == 1 and computer_quan == 2) or \
-        (user_quan == 2 and computer_quan == 0):
-        print('您赢了！')
-    elif user_quan == computer_quan:
-        print('平局！')
-    else:
-        print('您输了！')
+# # 猜拳游戏
+# # 导入随机数
+# import random
+#
+# while True:
+#     # 获取用户的拳头
+#     user_quan = int(input('请输入：石头（0）剪刀（1）布（2）'))
+#     if user_quan == 3:
+#         print('退出游戏！')
+#         break
+#     # 获取系统的拳头
+#     computer_quan = random.randint(0,2)
+#
+#     # 判断胜负
+#     # 用户赢的情况
+#     if (user_quan == 0 and computer_quan == 1) or \
+#         (user_quan == 1 and computer_quan == 2) or \
+#         (user_quan == 2 and computer_quan == 0):
+#         print('您赢了！')
+#     elif user_quan == computer_quan:
+#         print('平局！')
+#     else:
+#         print('您输了！')
 
 
 # 重复的代码越多，后期维护的工作量就越大，成本越高
@@ -133,6 +133,26 @@ while True:
 #         continue
 #
 # print('水仙花数是：d%',n)
+
+# # 完美数:除开自身以外的约数的和等于其自身
+#
+# for i in range(1,1000):
+#     s = 0
+#     for a in range(1,i):
+#         if i%a == 0:
+#             s += a
+#     if s == i:
+#         print(i)
+
+# Fibonacci斐波那契数列，又称黄金分割。比如 1 1 2 3 5 8 13...
+
+
+
+
+
+
+
+
 
 #  简易版的员工管理系统
 # 1 接受用户输入
