@@ -46,24 +46,24 @@
 
 # 编写一个函数用于计算从start开始到end结束之间所有的数字的累加和
 
-def all_adds(start,end):
-
-    # 判断start end是都是数字
-
-    if not my_type:
-        print('start 应该是一个数字！')
-        return None
-
-    i = start
-    s = 0
-    while i <= end:
-        s += i
-        i += 1
-
-    return s
-
-ret = all_adds(1,100)
-print('ret:',ret)
+# def all_adds(start,end):
+#
+#     # 判断start end是都是数字
+#
+#     if not my_type:
+#         print('start 应该是一个数字！')
+#         return None
+#
+#     i = start
+#     s = 0
+#     while i <= end:
+#         s += i
+#         i += 1
+#
+#     return s
+#
+# ret = all_adds(1,100)
+# print('ret:',ret)
 
 # # 编写一个函数根据传入的运算符，进行相应的 加减乘除 运算
 #
