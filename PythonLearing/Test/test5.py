@@ -26,19 +26,237 @@
 # print()
 # for v in my_str:
 #     print(v,end=' ')
+6
 
+# poetry = '有朋自远方来，不亦说乎.说'
 
-poetry = '有朋自远方来，不亦说乎.说'
-
-# replace并不会把原来的字符串替换掉，而是会产生一个新的字符串
-new_poetry = poetry.replace('说','乐')
-print(poetry)
-print(new_poetry)
-new_poetry = poetry.replace('说','乐',1)
-print(new_poetry)
+# # replace并不会把原来的字符串替换掉，而是会产生一个新的字符串
+# new_poetry = poetry.replace('说','乐')
+# print(poetry)
+# print(new_poetry)
+# new_poetry = poetry.replace('说','乐',1)
+# print(new_poetry)
 
 # 容器专属方法——函数
-# 字符串通过点的方式条用函数。
+# 字符串通过点的方式调用函数。
 
 # 1.字符串一旦定义不允许修改
 # 2.字符串容器中的元素都是字符串类型的
+
+# 找到字符串中 @ 的位置
+# 获得字符串中的子串
+# user_email = 'zhengzheng@qq.com'
+# # 如果查找到，返回子串第一次出现的位置
+# # 如果查找不到 @,返回-1
+# position = user_email.find('@')
+# if position == -1:
+#     print('@不存在，邮箱不合法')
+# else:
+#     print(position)
+
+
+# # 字符串提供了一种语法，用来获取字符串中的一个子串
+#
+# user_email = 'zhengzheng@qq.com'
+#
+# print(user_email[0])
+# # 切片语法，左闭右开
+# print(user_email[0:3])
+# print(user_email[0:10])
+# # 获得容器元素个数
+# string_lengh = len(user_email)
+# print(user_email[4:string_lengh])
+#
+# # 起始值不写表示从0开始，结束值不写表示到最后
+# print(user_email[:10])
+# print(user_email[0:])
+# print(user_email[:])
+# # 步长
+# print('*' * 30)
+# print(user_email[0:10:2])
+#
+# # 起始 结束 步长都可以为负数
+# print(user_email[-5:-1])
+# print(user_email[6:1:-1])
+# # 字符串逆序
+# print(user_email[::-1])
+
+
+# # 默认参数
+# def my_function(num):
+#     print('num',num)
+#
+# my_function(18)
+# # 函数需要一个参数，调用的使用必须要传递一个参数
+
+# 我们在给函数形参设置默认参数时，并不是会给所有的参数都设置默认参数
+# 注意点：如果某一个位置形参设置了默认参数，那么该位置后面的所有参数都必须设置默认参数
+
+# def my_num(a,b=20,c=30):
+#     return a+b+c
+#
+# ret = my_num(10)
+# ret = my_num(10,100)
+# ret = my_num(10,100,1000)
+# print(ret)
+
+
+# user_email = 'zhengzheng@qq.com'
+# # 如果查找到，返回子串第一次出现的位置
+# # 如果查找不到 @,返回-1
+# position = user_email.find('@')
+# if position == -1:
+#     print('@不存在，邮箱不合法')
+# else:
+#     username = user_email[:position]
+#     houzhui = user_email[position+1:]
+#     print('用户名是：',username)
+#     print('邮箱后缀是：',houzhui)
+
+# # split 拆分
+# my_str = 'aa#b123#cc#dd'
+# ret = my_str.split('#')
+# print(ret)
+# print(ret[0])
+# print(ret[3])
+#
+# user_email = 'zhengzheng@qq.com'
+# # 获取 @ 在字符串user_email中出现的次数
+# char_count = user_email.count('@')
+# if char_count > 1:
+#     print('你的邮箱不合法！')
+# else:
+#     result = user_email.split('@')
+#     print('用户名：',result[0])
+#     print('邮箱后最：',result[1])
+
+# # 获得用户的注册名
+# register_name = input('请输入你的用户名：')
+# # 去掉用户两边的空格
+# register_name = register_name.strip()
+# # 判断字符串是否全部为字母
+# if register_name.isalpha():
+#     print('恭喜你',register_name,'注册成功！')
+# else:
+#     print('注册失败！')
+
+
+# 列表
+# 字符串中的元素不能够修改，而且元素类型单一
+# 列表中的元素可以修改，并且可以存放多种类型的元素
+
+# my_list = []
+
+# 创建一个带有数字类型元素的列表
+# my_list = [10,20,30]
+
+# 创建一个带有字符串类型元素的列表
+# my_list = ['aa','bb','cc']
+
+# 列表中可以再放另一个列表
+# my_list = [[1,2,3],[4,5,6],[7,8,9]]
+
+# 列表中可以放不同类型的元素
+# my_list = ['hello',100,200,[5,6,5,6]]
+
+# #  列表的而遍历操作
+# my_list = [0,1,2,3,4,5,6,7,8,9]
+# index = 0
+# while index < 6:
+#     print(my_list[index])
+#     index += 1
+
+# for循环一般用于容器中遍历
+# for val in my_list:
+#     print(val)
+
+# # break continue 可以用在循环中
+# my_list = [[1,2,3],[4,5,6],[7,8,9]]
+# i = 0
+# while i < len(my_list):
+#      j = 0
+#      while j < len(my_list[i]):
+#          print(my_list[i][j])
+#          j += 1
+#      i += 1
+#
+# print('*'*30)
+#
+# for o in my_list:
+#     for v in o:
+#         print(v)
+
+# # 创建一个包含10个随机数的列表
+# import random
+# my_list = []
+#
+# i = 0
+# while i < 10:
+#     # 产生随机数
+#     random_number = random.randint(1,100)
+#     # 将随机数插入到列表中
+#     my_list.append(random_number)
+#     i += 1
+#
+# print(my_list)
+# # 对列表中的元素进行排序，sort 排序的意思
+# # 默认排序是从小到大，升序排序
+# my_list.sort()
+# print(my_list)
+# #将sort 函数的 reverse 默认值改为True，即可实现从大到小的排序
+# my_list.sort(reverse=True)
+# print(my_list)
+
+# my_list = [1,2,3,4,5,676,7,8,9]
+#
+# old_value = 4
+# new_value = 21
+#
+# # index 用于根据数据值进行查找，如果查询结果失败，则会报错
+# if old_value in my_list:
+#     # 查找到old_value 的位置
+#     pos = my_list.index(old_value)
+#     # 根据位置修改参数
+#     my_list[pos] = new_value
+#
+# print(my_list)
+
+# 练习:一个学校，三个办公室，八位老师随机分配工位
+
+# 定义学校和办公室
+import random
+school = [[],[],[]]
+
+def creat_teachers():
+    '''创建老师列表'''
+
+    # 定义列表保存老师
+    teacher_list = []
+
+    index = 1
+    while index <= 8:
+        # 创建老师的名字
+        teacher_name = '老师' + str(index)
+        # 把老师装进笼子里
+        teacher_list.append(teacher_name)
+        index += 1
+
+    return teacher_list
+
+techers_list = creat_teachers()
+# print(techers_list)
+# techers_list2 = creat_teachers()
+# print(techers_list2)
+
+# 分配老师
+for teacher in techers_list:
+    # 产生一个办公室编号的随机数
+    office_number = random.randint(0,2)
+    # 给老师随机分配办公室
+    school[office_number].append(teacher)
+
+# 查看各个办公室的老师
+for office in school:
+    for person in office:
+        print(person,end='  ')
+    print()
