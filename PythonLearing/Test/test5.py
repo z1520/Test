@@ -223,40 +223,148 @@
 
 # 练习:一个学校，三个办公室，八位老师随机分配工位
 
-# 定义学校和办公室
-import random
-school = [[],[],[]]
+# # 定义学校和办公室
+# import random
+# school = [[],[],[]]
+#
+# def creat_teachers():
+#     '''创建老师列表'''
+#
+#     # 定义列表保存老师
+#     teacher_list = []
+#
+#     index = 1
+#     while index <= 8:
+#         # 创建老师的名字
+#         teacher_name = '老师' + str(index)
+#         # 把老师装进笼子里
+#         teacher_list.append(teacher_name)
+#         index += 1
+#
+#     return teacher_list
+#
+# techers_list = creat_teachers()
+# # print(techers_list)
+# # techers_list2 = creat_teachers()
+# # print(techers_list2)
+#
+# # 分配老师
+# for teacher in techers_list:
+#     # 产生一个办公室编号的随机数
+#     office_number = random.randint(0,2)
+#     # 给老师随机分配办公室
+#     school[office_number].append(teacher)
+#
+# # 查看各个办公室的老师
+# for office in school:
+#     for person in office:
+#         print(person,end='  ')
+#     print()
 
-def creat_teachers():
-    '''创建老师列表'''
 
-    # 定义列表保存老师
-    teacher_list = []
+# # 元组可以从美国语法层面来限制数据的意外修改
+# # 元组使用小括号来定义
+# my_tuple = (10,20,30,40,50)
+# print(my_tuple[0])
+# # 注意：元组中只有一个元素的话，需要在元素后面添加括号
+# my_tuple = (10,)
+# # 元组可以嵌套元组
+# my_tuple = ((3,4,5),(6,7,8))
+# print(my_tuple)
+# # 元组中的元素不能被修改
+# my_tuple = (1,2,3)
+# # my_tuple[0] = 100
+#
+# for v in my_tuple:
+#     print(v)
+#
+# # 查询
+# pos = my_tuple.index(3)
+# print(pos)
+#
+# my_tuple = ((10,),)
+# # 元组支持切片操作
+# my_tuple = (1,4,3,5,2)
+# print(my_tuple[1:])
 
-    index = 1
-    while index <= 8:
-        # 创建老师的名字
-        teacher_name = '老师' + str(index)
-        # 把老师装进笼子里
-        teacher_list.append(teacher_name)
-        index += 1
 
-    return teacher_list
+# 字典
+# 字典的查找效率很高，但是比较占内存，字典就是以空间换时间
+# 字典的定义
+def test01():
+    my_dict = {'name':'Obama','age':18,'gender':'男',101:100}
+    print(my_dict['name'])
+    print(my_dict[101])  # key关键字   value值
+    my_dict['gender'] = '女'
+    print(my_dict)
 
-techers_list = creat_teachers()
-# print(techers_list)
-# techers_list2 = creat_teachers()
-# print(techers_list2)
+# test01()
 
-# 分配老师
-for teacher in techers_list:
-    # 产生一个办公室编号的随机数
-    office_number = random.randint(0,2)
-    # 给老师随机分配办公室
-    school[office_number].append(teacher)
+# 字典的键不能重复，值是可以重复的
+# 字典是非序列式排序，不支持索引也不支持切片
 
-# 查看各个办公室的老师
-for office in school:
-    for person in office:
-        print(person,end='  ')
-    print()
+def test02():
+    """"不支持索引和切片"""
+
+    my_dict = {'name': 'Obama', 'age': 18, 'gender': '男', 101: 100}
+    print(my_dict[2])
+    print(my_dict[1:])
+
+# test02()
+
+def test03():
+    """获得字典的值"""
+
+    my_dict = {'name': 'Obama', 'age': 18, 'gender': '男', 101: 100}
+    # 使用括号这种访问字典元素的方式，如果键不存在会报错，程序终止
+    # print(my_dict['age1'])
+    # 使用 get 方法，如果 key 不存在默认返回 None ，  也可以返回指定默认值
+    print(my_dict.get('age','返回值'))
+    print(my_dict.get('name1'))
+
+# test03()
+
+def test04():
+    """修改和添加元素"""
+
+    my_dict = {'name': 'Obama', 'age': 18, 'gender': '男', 101: 100}
+    # 如果 key 不存在是新增元素
+    my_dict['score'] = 100  # 添加新元素
+    print(my_dict)
+    # 如果 key 存在就是修改元素
+    my_dict['name'] = 'xiaoming'
+    print(my_dict)
+
+# test04()
+
+# my_dict = {'name': 'Obama', 'age': 18, 'gender': '男', 101: 100}
+#
+# # del delete
+# del my_dict['age']
+# print(my_dict)
+# my_dict.clear()
+# print(my_dict)
+#
+# my_list = [1,2,34,4,5,6,7]
+# del my_list[0]
+# print(my_list)
+
+my_dict = {'name': 'Obama', 'age': 18, 'gender': '男', 101: 100}
+
+# 默认只能遍历出来键
+# for v in my_dict:
+#     print(v)
+
+# keys 放法获得所有的值列表
+key_list = my_dict.keys()
+print(key_list)
+
+value_list = my_dict.values()
+print(value_list)
+
+# keys 放法获得所有的值列表，每一个键值对都是一个列表
+key_value_list = my_dict.items()
+print(key_value_list)
+
+for key_value in key_value_list:
+    print('key:',key_value[0],'value:',key_value[1])
