@@ -355,16 +355,16 @@ my_dict = {'name': 'Obama', 'age': 18, 'gender': '男', 101: 100}
 # for v in my_dict:
 #     print(v)
 
-# keys 放法获得所有的值列表
-key_list = my_dict.keys()
-print(key_list)
-
-value_list = my_dict.values()
-print(value_list)
-
-# keys 放法获得所有的值列表，每一个键值对都是一个列表
-key_value_list = my_dict.items()
-print(key_value_list)
-
-for key_value in key_value_list:
-    print('key:',key_value[0],'value:',key_value[1])
+# # keys 放法获得所有的值列表
+# key_list = my_dict.keys()
+# print(key_list)
+#
+# value_list = my_dict.values()
+# print(value_list)
+#
+# # keys 放法获得所有的值列表，每一个键值对都是一个列表
+# key_value_list = my_dict.items()
+# print(key_value_list)
+#
+# for key_value in key_value_list:
+#     print('key:',key_value[0],'value:',key_value[1])
